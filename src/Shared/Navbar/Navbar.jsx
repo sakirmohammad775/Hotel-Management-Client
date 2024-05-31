@@ -1,3 +1,5 @@
+import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaTwitch } from "react-icons/fa6";
 
 const Navbar = () => {
     return (
@@ -19,7 +21,11 @@ const Navbar = () => {
                     <a className="btn btn-ghost text-xl">Hotel</a>
                 </div>
                 <div className="navbar-end">
-                    
+                    <div>
+                    <FaFacebook />
+                    <FaTwitter />
+                    <FaInstagram />
+                    </div>
                     <button className="btn">
                         Book Now
                     </button>
