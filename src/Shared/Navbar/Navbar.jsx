@@ -1,7 +1,13 @@
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
-import { FaTwitch } from "react-icons/fa6";
+import { Link } from "react-router-dom";
+
 
 const Navbar = () => {
+    const navLink = <>
+        <Link><li>Rooms</li></Link>
+        <Link><li>My Bookings</li></Link>
+        <Link><li>About Us</li></Link>
+    </>
     return (
         <>
             <div className="navbar bg-base-100">
@@ -11,9 +17,7 @@ const Navbar = () => {
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
                         </div>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                            <li><a>Homepage</a></li>
-                            <li><a>Portfolio</a></li>
-                            <li><a>About</a></li>
+                            {navLink}
                         </ul>
                     </div>
                 </div>
@@ -21,10 +25,10 @@ const Navbar = () => {
                     <a className="btn btn-ghost text-xl">Hotel</a>
                 </div>
                 <div className="navbar-end">
-                    <div>
-                    <FaFacebook />
-                    <FaTwitter />
-                    <FaInstagram />
+                    <div className="flex gap-5 mr-10">
+                        <FaFacebook />
+                        <FaTwitter />
+                        <FaInstagram />
                     </div>
                     <button className="btn">
                         Book Now

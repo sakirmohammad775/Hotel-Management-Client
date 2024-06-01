@@ -1,0 +1,38 @@
+/* src/ParallaxBanner.css */
+.parallax-container {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.parallax-section {
+  flex: 0 0 100%;
+  height: 600px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  scroll-snap-align: start;
+}
+
+.parallax-content {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.parallax-content h1 {
+  margin: 0;
+  font-size: 3em;
+}
+
+.parallax-content p {
+  margin: 10px 0 0;
+  font-size: 1.5em;
+}
