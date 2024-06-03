@@ -1,26 +1,12 @@
 import { Button, Card, CardBody, CardFooter, CardHeader, Carousel, IconButton, Tooltip, Typography } from "@material-tailwind/react";
-function CheckIcon() {
-    return (
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={2}
-            stroke="currentColor"
-            className="h-3 w-3"
-        >
-            <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M4.5 12.75l6 6 9-13.5"
-            />
-        </svg>
-    );
-}
+import { FaCheck } from "react-icons/fa";
+import { useLoaderData } from "react-router-dom";
 
 const RoomDetails = () => {
+    const room=useLoaderData()
     return (
         <>
+            
             <Carousel className="rounded-xl">
                 <img
                     src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80"
@@ -28,7 +14,7 @@ const RoomDetails = () => {
                     className="h-full w-full object-cover"
                 />
             </Carousel>
-            <div className="flex w-full">
+            <div className="flex w-full mt-20">
                 {/* left side */}
                 <div className="w-1/2">
                     <Card className="w-full max-w-[26rem] shadow-lg">
@@ -198,7 +184,7 @@ const RoomDetails = () => {
                                 color="white"
                                 className="mt-6 flex justify-center gap-1 text-7xl font-normal"
                             >
-                                <span className="mt-2 text-4xl">$</span>29{" "}
+                                <span className="mt-2 text-4xl">$</span>{room.title}{" "}
                                 <span className="self-end text-4xl">/mo</span>
                             </Typography>
                         </CardHeader>
@@ -206,31 +192,31 @@ const RoomDetails = () => {
                             <ul className="flex flex-col gap-4">
                                 <li className="flex items-center gap-4">
                                     <span className="rounded-full border border-white/20 bg-white/20 p-1">
-                                        <CheckIcon />
+                                        <FaCheck  />
                                     </span>
                                     <Typography className="font-normal">5 team members</Typography>
                                 </li>
                                 <li className="flex items-center gap-4">
                                     <span className="rounded-full border border-white/20 bg-white/20 p-1">
-                                        <CheckIcon />
+                                        <FaCheck  />
                                     </span>
                                     <Typography className="font-normal">200+ components</Typography>
                                 </li>
                                 <li className="flex items-center gap-4">
                                     <span className="rounded-full border border-white/20 bg-white/20 p-1">
-                                        <CheckIcon />
+                                        <FaCheck  />
                                     </span>
                                     <Typography className="font-normal">40+ built-in pages</Typography>
                                 </li>
                                 <li className="flex items-center gap-4">
                                     <span className="rounded-full border border-white/20 bg-white/20 p-1">
-                                        <CheckIcon />
+                                        <FaCheck  />
                                     </span>
                                     <Typography className="font-normal">1 year free updates</Typography>
                                 </li>
                                 <li className="flex items-center gap-4">
                                     <span className="rounded-full border border-white/20 bg-white/20 p-1">
-                                        <CheckIcon />
+                                        <FaCheck  />
                                     </span>
                                     <Typography className="font-normal">
                                         Life time technical support
