@@ -2,6 +2,7 @@ import { Button, Card, CardBody, CardHeader, Typography } from "@material-tailwi
 
 
 const RoomCard = () => {
+    
     return (
         <>
             <Card className="w-full max-w-[68rem] mx-auto flex-row">
@@ -32,6 +33,7 @@ const RoomCard = () => {
                     </Button>
                 </CardBody>
             </Card>
+         
         </>
     );
 };
