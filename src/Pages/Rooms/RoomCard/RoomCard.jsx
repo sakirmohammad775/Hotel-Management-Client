@@ -1,10 +1,12 @@
 import { Button, Card, CardBody, CardHeader, Typography } from "@material-tailwind/react";
 
 
-const RoomCard = () => {
-    
+
+const RoomCard = ({room}) => {
+    const {title,image,price,short_description,available}=room
     return (
         <>
+        
             <Card className="w-full max-w-[68rem] mx-auto flex-row">
                 <CardHeader shadow={false} floated={false}
                     className="m-0 w-2/5 shrink-0 rounded-r-none">
@@ -17,9 +19,10 @@ const RoomCard = () => {
 
                 <CardBody>
                     <Typography variant="h6" color="gray" className="mb-4 uppercase">
-                        startups</Typography>
+                        {title}</Typography>
                     <Typography variant="h4" color="blue-gray" className="mb-2">
-                        Lyft launching cross-platform service this week
+                       {price}
+                       
                     </Typography>
                     <Typography color="gray" className="mb-8 font-normal">
                         Like so many organizations these days, Autodesk is a company in
