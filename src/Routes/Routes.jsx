@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Layout from "../Layout/Layout";
 import Home from "../Pages/Home/Home/Home";
 import Rooms from "../Pages/Rooms/Rooms/Rooms";
+import RoomDetails from "../Pages/Rooms/RoomDetails/RoomDetails";
 
 
 
@@ -18,6 +19,12 @@ export const router = createBrowserRouter([
           path:"/rooms",
           element:<Rooms></Rooms>,
           loader:()=>fetch('http://localhost:5000/rooms')
+        },
+        {
+          path:"roomDetails",
+          element:<RoomDetails></RoomDetails>,
+          loader:()=>fetch('http://localhost:5000/rooms')
+
         }
       ]
     },

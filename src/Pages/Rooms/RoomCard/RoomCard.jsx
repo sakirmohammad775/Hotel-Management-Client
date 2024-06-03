@@ -11,7 +11,7 @@ const RoomCard = ({room}) => {
                 <CardHeader shadow={false} floated={false}
                     className="m-0 w-2/5 shrink-0 rounded-r-none">
                     <img
-                        src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80"
+                        src={image}
                         alt="card-image"
                         className="h-full w-full object-cover"
                     />
@@ -25,13 +25,10 @@ const RoomCard = ({room}) => {
                        
                     </Typography>
                     <Typography color="gray" className="mb-8 font-normal">
-                        Like so many organizations these days, Autodesk is a company in
-                        transition. It was until recently a traditional boxed software company
-                        selling licenses. Yet its own business model disruption is only part
-                        of the story
+                        {short_description}
                     </Typography>
                     <Button variant="text" className="flex items-center gap-2">
-                        Learn More
+                        Show Details
 
                     </Button>
                 </CardBody>
