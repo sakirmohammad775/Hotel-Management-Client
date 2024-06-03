@@ -4,10 +4,12 @@ import Navbar from "../Shared/Navbar/Navbar";
 
 const Layout = () => {
     return (
-       <>
-       <Navbar></Navbar>
-       <Outlet></Outlet>
-       </>
+        <><div className="max-w-screen-xl mx-auto">
+            <Navbar></Navbar>
+            <Outlet></Outlet>
+        </div>
+
+        </>
     );
 };
 

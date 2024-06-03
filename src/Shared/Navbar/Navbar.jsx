@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
     const navLink = <>
-        <Link><li>Rooms</li></Link>
+        <Link to='/rooms'><li>rooms</li></Link>
         <Link><li>My Bookings</li></Link>  {/* ony for for authenticated users .next work*/}
         <Link><li>About Us</li></Link>
     </>
