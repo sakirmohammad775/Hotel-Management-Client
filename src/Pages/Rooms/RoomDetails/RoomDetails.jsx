@@ -29,7 +29,9 @@ const RoomDetails = () => {
                     className="h-full w-full object-cover"
                 />
             </Carousel>
-            <div className="flex w-full mt-20">
+
+            <h3 className="text-3xl font-bold text-center mt-10 text-gray-800">{room.room_description}</h3>
+            <div className="flex w-full mt-10">
                 {/* left side */}
                 <div className="w-2/3">
                     <Card className="w-full  shadow-lg">
@@ -54,6 +56,7 @@ const RoomDetails = () => {
                                     color="blue-gray"
                                     className="flex items-center gap-1.5 font-normal"
                                 >
+                                    {room.ratings}
                                     <FaStar fill="currentColor"
                                         className="-mt-0.5 h-5 w-5 text-yellow-700" />
 
