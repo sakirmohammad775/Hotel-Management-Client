@@ -5,13 +5,16 @@ import './index.css'
 import { RouterProvider } from "react-router-dom";
 import { router } from './Routes/Routes';
 import { ThemeProvider } from '@material-tailwind/react';
+import { RoomProvider } from './Provider/RoomProvider';
 
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <ThemeProvider>
-      <RouterProvider router={router} />
-    </ThemeProvider>
+    <RoomProvider>
+      <ThemeProvider>
+        <RouterProvider router={router} />
+      </ThemeProvider>
+    </RoomProvider>
   </React.StrictMode>,
 )

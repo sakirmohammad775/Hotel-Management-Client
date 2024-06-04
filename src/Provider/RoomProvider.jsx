@@ -1,11 +1,29 @@
-import React from 'react';
+import axios from "axios";
+import {  createContext, useEffect, useState } from "react";
 
-const RoomProvider = () => {
+ const RoomContext = createContext()
+
+export const RoomProvider = ({children}) => {
+    const [rooms, setRooms] = useState([])
+
+    useEffect(() => {
+        const fetchRooms = async () => {
+            try {
+                const response = await axios.get('http://localhost:5000/rooms')
+                setRooms(response.data)
+            } catch (error) {
+                console.error('Error fetching the hotels', error);
+            }
+        }
+        fetchRooms()
+    }, [])
     return (
-        <div>
-            
-        </div>
+        <>
+            <RoomContext.Provider value={rooms}>
+                {children}
+            </RoomContext.Provider>
+        </>
     );
 };
 
-export default RoomProvider;
+export default RoomContext;
