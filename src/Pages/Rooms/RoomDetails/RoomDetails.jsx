@@ -1,9 +1,10 @@
 import { Button, Card, CardBody, CardFooter, CardHeader, Carousel, IconButton, Tooltip, Typography } from "@material-tailwind/react";
 import { FaCheck } from "react-icons/fa";
-import { useLoaderData } from "react-router-dom";
+
 
 const RoomDetails = () => {
-    const room=useLoaderData()
+    
+
     return (
         <>
             
@@ -175,16 +176,16 @@ const RoomDetails = () => {
                             <Typography
                                 variant="small"
                                 color="white"
-                                className="font-normal uppercase"
+                                className="font-bold uppercase tracking-widest"
                             >
-                                standard
+                                Facilities
                             </Typography>
                             <Typography
                                 variant="h1"
                                 color="white"
                                 className="mt-6 flex justify-center gap-1 text-7xl font-normal"
                             >
-                                <span className="mt-2 text-4xl">$</span>{room.title}{" "}
+                                <span className="mt-2 text-4xl">$</span>{" "}
                                 <span className="self-end text-4xl">/mo</span>
                             </Typography>
                         </CardHeader>

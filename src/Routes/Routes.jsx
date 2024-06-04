@@ -21,7 +21,7 @@ export const router = createBrowserRouter([
           loader:()=>fetch('http://localhost:5000/rooms')
         },
         {
-          path:"roomDetails",
+          path:"/roomDetails",
           element:<RoomDetails></RoomDetails>,
           loader:()=>fetch('http://localhost:5000/rooms')
 
