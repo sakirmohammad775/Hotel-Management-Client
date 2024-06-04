@@ -4,6 +4,7 @@ import Home from "../Pages/Home/Home/Home";
 import Rooms from "../Pages/Rooms/Rooms/Rooms";
 import RoomDetails from "../Pages/Rooms/RoomDetails/RoomDetails";
 import SignUp from "../Pages/SignUp/SignUp";
+import SignIn from "../Pages/SignIn/SignIn";
 
 
 
@@ -28,8 +29,12 @@ export const router = createBrowserRouter([
 
         },
         {
-          path:"/signIn",
+          path:"/signUp",
           element:<SignUp></SignUp>
+        },
+        {
+          path:"/signIn",
+          element:<SignIn></SignIn>
         }
       ]
     },

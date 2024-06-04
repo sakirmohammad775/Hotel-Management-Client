@@ -1,54 +1,45 @@
-import { useContext } from "react";
-import { AuthContext } from "../../Provider/AuthProvider";
+import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { FaFacebook, FaGoogle } from "react-icons/fa";
+import { AuthContext } from "../../Provider/AuthProvider";
 
+const SignIn = () => {
 
-const SignUp = () => {
-    const { createUser } = useContext(AuthContext)
+    const { signIn} = useContext(AuthContext)
     const navigate = useNavigate()
+    const [error, setError] = useState('')
 
-    // const backgroundImageStyle = {
-    //     backgroundImage: `url(${signUpImage})`,
-    //     backgroundSize: 'cover', // Cover the entire div
-    //     backgroundPosition: 'center', // Center the image
-    //     backgroundRepeat: 'no-repeat', // Do not repeat the image
-    // };
-
-    const handleSignUp = e => {
+    const handleSignIn = e => {
         e.preventDefault()
         const form = e.target
-        const name = form.name.value
         const email = form.email.value
         const password = form.password.value
-        console.log(name, email, password);
+        setError('')
 
-        //authentication from authContext
-        createUser(email, password)
+        signIn(email, password)
             .then(result => {
                 const user = result.user
-                console.log(user); //for testing
-                navigate('/')
+                console.log(user);
+                navigate('/');
             })
-            .catch(error => console.log(error))
-    }
+            .catch(error =>
+                // Set error message from Firebase
+                setError(error.message)
+            )
+        }
+       
+
+
     return (
         <>
-
             <div className="hero min-h-screen">
                 <div className="hero-content flex-col ">
                     <div className="text-center lg:text-left">
-                        <h1 className="text-5xl font-bold">SignUp</h1>
+                        <h1 className="text-5xl font-bold">SignIn</h1>
                         <p className="py-6">Explore Our page</p>
                     </div>
                     <div className="card  w-full max-w-lg bg-transparent">
-                        <form onSubmit={handleSignUp} className="card-body">
-                            <div className="form-control w-96">
-                                <label className="label">
-                                    <span className="font-bold">Name</span>
-                                </label>
-                                <input type="name" placeholder="name" name="name" className="input input-bordered bg-transparent  " required />
-                            </div>
+                        <form onSubmit={handleSignIn} className="card-body">
+
                             <div className="form-control">
                                 <label className="label">
                                     <span className="font-bold">Email</span>
@@ -70,20 +61,21 @@ const SignUp = () => {
                                 </label>
                             </div>
                             <div className="form-control mt-3">
-                                <button type="submit" className="btn  bg-transparent">SignUp</button>
+                                <button type="submit" value="Submit" className="btn  bg-transparent">SignIn</button>
                             </div>
                         </form>
                         {/*if error found*/}
+                        {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
 
 
-                        <p className="text-center">Already have an account? <Link to="/signIn">Sign In</Link></p>
+                        <p className="text-center">Already have an account? <Link to="/signUp">Sign In</Link></p>
 
                         {/*another login process*/}
-                        <div className="flex my-5 justify-center gap-6">
+                        {/* <div className="flex my-5 justify-center gap-6">
 
-                            <button className="pt-2"><FaGoogle /></button>
-                            <button className="pt-2"><FaFacebook /></button>
-                        </div>
+                            <button className="pt-2"onClick={handleGoogleSignIn}><FaGoogle /></button>
+                            <button className="pt-2" onClick={handleFacebookSignIn}><FaFacebook /></button>
+                        </div> */}
                     </div>
                 </div>
             </div>
@@ -91,4 +83,4 @@ const SignUp = () => {
     );
 };
 
-export default SignUp;
+export default SignIn;
