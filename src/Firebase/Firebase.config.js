@@ -1,17 +1,18 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+// https://firebase.google.com/docs/web/setup#available-libraries 
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyABDxmblQcVIyzBjrwGF5Z2bRBZ3OD1FfY",
-  authDomain: "hotel-management-43f06.firebaseapp.com",
-  projectId: "hotel-management-43f06",
-  storageBucket: "hotel-management-43f06.appspot.com",
-  messagingSenderId: "927770425125",
-  appId: "1:927770425125:web:6da494ded7c6623a6d4ccc"
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_apiKey,
+  projectId: import.meta.env.VITE_apiKey,
+  storageBucket: import.meta.env.VITE_apiKey,
+  messagingSenderId: import.meta.env.VITE_apiKey,
+  appId: import.meta.env.VITE_apiKey,
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+export default app
