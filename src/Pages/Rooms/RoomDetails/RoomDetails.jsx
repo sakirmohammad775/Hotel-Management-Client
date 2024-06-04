@@ -1,9 +1,13 @@
 import { Button, Card, CardBody, CardFooter, CardHeader, Carousel, IconButton, Tooltip, Typography } from "@material-tailwind/react";
+import { useContext } from "react";
 import { FaCheck } from "react-icons/fa";
+import RoomContext from "../../../Provider/RoomProvider";
 
 
 const RoomDetails = () => {
-    
+    const room=useContext(RoomContext)
+    const data=room[0]
+    console.log(data.ratings);
 
     return (
         <>
@@ -62,7 +66,7 @@ const RoomDetails = () => {
                                             clipRule="evenodd"
                                         />
                                     </svg>
-                                    5.0
+                                    {data.ratings}
                                 </Typography>
                             </div>
                             <Typography color="gray">
