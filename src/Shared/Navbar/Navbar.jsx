@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
     const navLink = <>
         <Link to='/rooms'><li>rooms</li></Link>
-        <Link><li>My Bookings</li></Link>  {/* ony for for authenticated users .next work*/}
+        <Link to='/myBookings'><li>My Bookings</li></Link>  {/* ony for for authenticated users .next work*/}
         <Link><li>About Us</li></Link>
     </>
     return (
@@ -29,10 +29,13 @@ const Navbar = () => {
                         <FaFacebook />
                         <FaTwitter />
                         <FaInstagram />
+                        <input type="checkbox" value="synthwave" className="toggle theme-controller"/>
                     </div>
+
                     <button className="btn">
                         Book Now
                     </button>
+
                 </div>
             </div>
         </>

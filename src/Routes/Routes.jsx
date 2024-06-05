@@ -5,6 +5,7 @@ import Rooms from "../Pages/Rooms/Rooms/Rooms";
 import RoomDetails from "../Pages/Rooms/RoomDetails/RoomDetails";
 import SignUp from "../Pages/SignUp/SignUp";
 import SignIn from "../Pages/SignIn/SignIn";
+import MyBookings from "../Pages/MyBookings/MyBookings";
 
 
 
@@ -35,6 +36,11 @@ export const router = createBrowserRouter([
         {
           path:"/signIn",
           element:<SignIn></SignIn>
+        },
+        {
+          path:"/myBookings",
+          element:<MyBookings></MyBookings>
+
         }
       ]
     },
