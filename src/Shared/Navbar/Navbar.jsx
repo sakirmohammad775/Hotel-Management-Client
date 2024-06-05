@@ -47,10 +47,11 @@ const Navbar = () => {
                             user?.email?
                             <><button onClick={handleLogOut} className="btn btn-ghost text-white bg-orange-600 px-10">SignOut</button></>
                             :<><Link className="btn" to='/signIn' >SignIn</Link></>
+                            
                         }
                         
                     </div>
-
+                    <h3>hello</h3>
                     <button className="btn">
                         Book Now
                     </button>
