@@ -1,8 +1,20 @@
+import { useContext } from "react";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 
 const Navbar = () => {
+    const {user,logOut}=useContext(AuthContext)
+
+    const handleLogOut=()=>{
+        logOut()
+        .then()
+        .catch(error=>{
+            console.log(error);
+        })
+    }
+
     const navLink = <>
         <Link to='/rooms'><li>rooms</li></Link>
         <Link to='/myBookings'><li>My Bookings</li></Link>  {/* ony for for authenticated users .next work*/}
@@ -30,6 +42,13 @@ const Navbar = () => {
                         <FaTwitter />
                         <FaInstagram />
                         <input type="checkbox" value="synthwave" className="toggle theme-controller"/>
+                        
+                        {
+                            user?.email?
+                            <><button onClick={handleLogOut} className="btn btn-ghost text-white bg-orange-600 px-10">SignOut</button></>
+                            :<><Link className="btn" to='/signIn' >SignIn</Link></>
+                        }
+                        
                     </div>
 
                     <button className="btn">
