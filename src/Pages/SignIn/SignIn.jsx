@@ -1,10 +1,11 @@
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
+import { FaGoogle } from "react-icons/fa";
 
 const SignIn = () => {
 
-    const { signIn} = useContext(AuthContext)
+    const { signIn,signInWithGoogle} = useContext(AuthContext)
     const navigate = useNavigate()
     const [error, setError] = useState('')
 
@@ -25,6 +26,16 @@ const SignIn = () => {
                 // Set error message from Firebase
                 setError(error.message)
             )
+        }
+        //signIn with google
+        const handleGoogleSignIn=()=>{
+            signInWithGoogle()
+        .then(result=>{
+            console.log(result.user);
+        })
+        .catch(error=>{
+            console.error(error);
+        })
         }
        
 
@@ -71,11 +82,11 @@ const SignIn = () => {
                         <p className="text-center">Already have an account? <Link to="/signUp">Sign In</Link></p>
 
                         {/*another login process*/}
-                        {/* <div className="flex my-5 justify-center gap-6">
+                        <div className="flex my-5 justify-center gap-6">
 
-                            <button className="pt-2"onClick={handleGoogleSignIn}><FaGoogle /></button>
-                            <button className="pt-2" onClick={handleFacebookSignIn}><FaFacebook /></button>
-                        </div> */}
+                            <button className="pt-2"onClick={handleGoogleSignIn}><FaGoogle/></button>
+                        
+                        </div>
                     </div>
                 </div>
             </div>
