@@ -1,0 +1,47 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.hotel-booking-form {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.hotel-booking-form h2 {
+  margin-bottom: 20px;
+}
+
+.hotel-booking-form div {
+  margin-bottom: 15px;
+}
+
+.hotel-booking-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.hotel-booking-form input,
+.hotel-booking-form select {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.hotel-booking-form button {
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.hotel-booking-form button:hover {
+  background-color: #218838;
+}

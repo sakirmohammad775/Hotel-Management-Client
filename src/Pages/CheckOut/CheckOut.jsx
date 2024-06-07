@@ -1,46 +1,84 @@
-
+import { useContext, useState } from "react";
+import  "./CheckOut.css"
+import RoomContext from "../../Provider/RoomProvider";
 
 const CheckOut = () => {
-   
-    return (
-        <div>
-            <div className="w-full">
-                
-            </div>
+    const room =useContext(RoomContext)
+    const [form, setForm] = useState([]);
+    
+    
+      const handleChange = e => {
+        const { name, value } = e.target;
+        setForm((prevForm) => ({
+          ...prevForm,
+          [name]: value
+        }));
+      };
+    
+      const handleSubmit = (e) => {
+        e.preventDefault();
+        // Add your form submission logic here
+        console.log('Form submitted', form);
+      };
 
-            <h3>booking:</h3>
-            
-            <div className="hero min-h-screen bg-base-200">
-                <div className="hero-content flex-col lg:flex-row-reverse">
-                    <div className="text-center lg:text-left">
-                        <h1 className="text-5xl font-bold">Login now!</h1>
-                        <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+    return (
+        <>
+        <h3>{room.title}</h3>
+            <div className="hotel-booking-form">
+                <h2>Bookings:</h2>
+                <form onSubmit={handleSubmit}>
+                    <div>
+                        <label>Name</label>
+                        <input type="text" name="name" value={form.name} onChange={handleChange} required />
                     </div>
-                    <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                        <form className="card-body">
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Email</span>
-                                </label>
-                                <input type="email" placeholder="email" className="input input-bordered" required />
-                            </div>
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Password</span>
-                                </label>
-                                <input type="password" placeholder="password" className="input input-bordered" required />
-                                <label className="label">
-                                    <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-                                </label>
-                            </div>
-                            <div className="form-control mt-6">
-                                <button className="btn btn-primary">Login</button>
-                            </div>
-                        </form>
+                    <div>
+                        <label>Email</label>
+                        <input type="email" name="email" value={form.email} onChange={handleChange} required />
                     </div>
-                </div>
+                    <div>
+                        <label>Phone</label>
+                        <input type="tel" name="phone" value={form.phone} onChange={handleChange} required />
+                    </div>
+                    <div>
+                        <label>Check-in Date</label>
+                        <input type="date" name="checkInDate" value={form.checkInDate} onChange={handleChange} required />
+                    </div>
+                    <div>
+                        <label>Check-out Date</label>
+                        <input type="date" name="checkOutDate" value={form.checkOutDate} onChange={handleChange} required />
+                    </div>
+                    <div>
+                        <label>Room Type</label>
+                        <select name="roomType" value={form.roomType} onChange={handleChange} required>
+                            <option value="single">Single</option>
+                            <option value="double">Double</option>
+                            <option value="suite">Suite</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Number of Guests</label>
+                        <input type="number" name="guests" value={form.guests} onChange={handleChange} required min="1" />
+                    </div>
+                    <div>
+                        <label>Card Number</label>
+                        <input type="text" name="cardNumber" value={form.cardNumber} onChange={handleChange} required />
+                    </div>
+                    <div>
+                        <label>Name on Card</label>
+                        <input type="text" name="cardName" value={form.cardName} onChange={handleChange} required />
+                    </div>
+                    <div>
+                        <label>Expiry Date</label>
+                        <input type="text" name="expiryDate" value={form.expiryDate} onChange={handleChange} required />
+                    </div>
+                    <div>
+                        <label>CVV</label>
+                        <input type="text" name="cvv" value={form.cvv} onChange={handleChange} required />
+                    </div>
+                    <button type="submit">Booking Confirm</button>
+                </form>
             </div>
-        </div>
+        </>
     );
 };
 
