@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 
 const RoomCard = ({ room }) => {
-    const { _id,title, image, price, short_description, available } = room
+    const { _id,title, images, price, short_description, available } = room
     console.log(room);
     return (
         <>
@@ -13,7 +13,7 @@ const RoomCard = ({ room }) => {
                 <CardHeader shadow={false} floated={false}
                     className="m-0 w-2/5 shrink-0 rounded-r-none">
                     <img
-                        src={image}
+                        src={images}
                         alt="card-image"
                         className="h-full w-full object-cover"
                     />
