@@ -1,0 +1,56 @@
+.check-availability {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.check-availability h2 {
+  margin-bottom: 20px;
+}
+
+.check-availability .form-group {
+  margin-bottom: 15px;
+}
+
+.check-availability label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.check-availability input {
+  width: calc(100% - 20px);
+  padding: 8px 10px;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+
+.check-availability button {
+  width: 100%;
+  padding: 10px;
+  background-color: #000;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.check-availability button:hover {
+  background-color: #333;
+}
+
+.check-availability .search-criteria {
+  display: block;
+  margin-top: 10px;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.check-availability .search-criteria:hover {
+  text-decoration: underline;
+}

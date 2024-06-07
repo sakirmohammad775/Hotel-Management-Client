@@ -3,14 +3,14 @@ import { useContext } from "react";
 import { FaCameraRetro, FaWifi } from "react-icons/fa";
 import { FcDataProtection } from "react-icons/fc";
 import RoomContext from "../../../Provider/RoomProvider";
-import CheckAvailability from "../../../Shared/ChackAvailibility/CheckAvailibility";
+import CheckAvailability from "../../../Shared/CheckAvailability/CheckAvailability";
 
 const FeaturedRooms = () => {
     const rooms = useContext(RoomContext)
     return (
 
         <>
-            <div className="w-full max-w-screen-xl">
+            <div className="w-full flex ">
                 {/* left side */}
                 <div className="grid grid-cols-2 w-2/3">
                     {rooms.map(room => (<div key={room._id}>
