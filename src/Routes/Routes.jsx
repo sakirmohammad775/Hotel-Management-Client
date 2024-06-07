@@ -6,6 +6,7 @@ import RoomDetails from "../Pages/Rooms/RoomDetails/RoomDetails";
 import SignUp from "../Pages/SignUp/SignUp";
 import SignIn from "../Pages/SignIn/SignIn";
 import MyBookings from "../Pages/MyBookings/MyBookings";
+import CheckOut from "../Pages/CheckOut/CheckOut";
 
 
 
@@ -42,6 +43,10 @@ export const router = createBrowserRouter([
           path:"/myBookings",
           element:<MyBookings></MyBookings>
 
+        },
+        {
+          path:"/checkOut",
+          element:<CheckOut></CheckOut>
         }
       ]
     },

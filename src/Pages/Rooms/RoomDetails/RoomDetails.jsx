@@ -2,7 +2,7 @@ import { Button, Card, CardBody, CardFooter, CardHeader, Carousel, IconButton, T
 import { useContext, useEffect, useState } from "react";
 import { FaCameraRetro, FaCheck, FaFire, FaHome, FaStar, FaWifi } from "react-icons/fa";
 import RoomContext from "../../../Provider/RoomProvider";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { MdMonitor } from "react-icons/md";
 
 
@@ -181,7 +181,8 @@ const RoomDetails = () => {
                             </ul>
                         </CardBody>
                         <CardFooter className="mt-12 p-0">
-                            <Button
+                           <Link to="/checkOut">
+                           <Button
                                 size="lg"
                                 color="white"
                                 className="hover:scale-[1.02] focus:scale-[1.02] active:scale-100"
@@ -190,6 +191,7 @@ const RoomDetails = () => {
                             >
                                 Book Now
                             </Button>
+                           </Link>
                         </CardFooter>
                     </Card>
                 </div>
