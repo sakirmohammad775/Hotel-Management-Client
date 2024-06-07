@@ -1,0 +1,306 @@
+[
+    {
+        "images": "https://i.ibb.co/wJsHzdV/image2.webp",
+        "room_description": "Deluxe King Room with city view",
+        "price_per_night": 120,
+        "room_size": "35 sqm",
+        "availability": "Available",
+        "room_images": "https://via.placeholder.com/150",
+        "special_offers": "10% off for stays longer than 3 nights",
+        "price": 108,
+        "ratings": 4.5,
+        "reviews": [
+            "Spacious room with a great view of the city.",
+            "Very clean and comfortable."
+        ],
+        "facilities": "Free Wi-Fi, Air conditioning, Mini bar, Flat-screen TV, Safe, Coffee machine, Desk, Room service, Complimentary toiletries, City view"
+    },
+    {
+        "images": "https://i.ibb.co/wJsHzdV/image2.webp",
+        "room_description": "Superior Twin Room with garden view",
+        "price_per_night": 100,
+        "room_size": "30 sqm",
+        "availability": "Limited",
+        "room_images": "https://via.placeholder.com/150",
+        "special_offers": "Free breakfast included",
+        "price": 100,
+        "ratings": 4.2,
+        "reviews": [
+            "Beautiful view and quiet surroundings.",
+            "Beds were very comfortable."
+        ],
+        "facilities": "Free Wi-Fi, Garden view, Air conditioning, Flat-screen TV, Coffee machine, Complimentary toiletries, Room service, Desk, Safe, Laundry service"
+    },
+    {
+        "images": "https://i.ibb.co/wJsHzdV/image2.webp",
+        "room_description": "Luxury Suite with balcony",
+        "price_per_night": 250,
+        "room_size": "60 sqm",
+        "availability": "Available",
+        "room_images": "https://via.placeholder.com/150",
+        "special_offers": "Free spa access for stays over 3 nights",
+        "price": 225,
+        "ratings": 4.8,
+        "reviews": [
+            "Absolutely stunning suite with all the amenities.",
+            "Perfect for a luxurious stay."
+        ],
+        "facilities": "Balcony, Free Wi-Fi, Air conditioning, Spa access, Flat-screen TV, Mini bar, Coffee machine, Bathrobe, Room service, Jacuzzi"
+    },
+    {
+        "images": "https://i.ibb.co/wJsHzdV/image2.webp",
+        "room_description": "Economy Single Room",
+        "price_per_night": 60,
+        "room_size": "15 sqm",
+        "availability": "Available",
+        "room_images": "https://via.placeholder.com/150",
+        "special_offers": "No special offers available",
+        "price": 60,
+        "ratings": 3.8,
+        "reviews": [
+            "Good for a short stay.",
+            "Small but clean and functional."
+        ],
+        "facilities": "Free Wi-Fi, Air conditioning, Flat-screen TV, Desk, Complimentary toiletries, Room service, Safe, Daily housekeeping, Laundry service, Ironing facilities"
+    },
+    {
+        "images": "https://i.ibb.co/wJsHzdV/image2.webp",
+        "room_description": "Family Room with two double beds",
+        "price_per_night": 180,
+        "room_size": "45 sqm",
+        "availability": "Limited",
+        "room_images": "https://via.placeholder.com/150",
+        "special_offers": "Kids stay free",
+        "price": 180,
+        "ratings": 4.6,
+        "reviews": [
+            "Perfect for families, very spacious.",
+            "Kids loved the room."
+        ],
+        "facilities": "Free Wi-Fi, Air conditioning, Flat-screen TV, Mini bar, Coffee machine, Complimentary toiletries, Extra beds available, Room service, Safe, Laundry service"
+    },
+    {
+        "images": "https://i.ibb.co/wJsHzdV/image2.webp",
+        "room_description": "Executive Suite with sea view",
+        "price_per_night": 300,
+        "room_size": "70 sqm",
+        "availability": "Available",
+        "room_images": "https://via.placeholder.com/150",
+        "special_offers": "Complimentary airport transfer",
+        "price": 300,
+        "ratings": 4.9,
+        "reviews": [
+            "Amazing view and exceptional service.",
+            "Best stay we've had."
+        ],
+        "facilities": "Sea view, Free Wi-Fi, Air conditioning, Spa access, Flat-screen TV, Mini bar, Coffee machine, Jacuzzi, Room service, Safe"
+    },
+    {
+        "images": "https://i.ibb.co/wJsHzdV/image2.webp",
+        "room_description": "Standard Double Room",
+        "price_per_night": 90,
+        "room_size": "25 sqm",
+        "availability": "Available",
+        "room_images": "https://via.placeholder.com/150",
+        "special_offers": "Free parking included",
+        "price": 90,
+        "ratings": 4.1,
+        "reviews": [
+            "Good value for money.",
+            "Comfortable and clean."
+        ],
+        "facilities": "Free Wi-Fi, Air conditioning, Flat-screen TV, Mini bar, Complimentary toiletries, Coffee machine, Room service, Safe, Desk, Daily housekeeping"
+    },
+    {
+        "images": "https://i.ibb.co/wJsHzdV/image2.webp",
+        "room_description": "Junior Suite with city view",
+        "price_per_night": 200,
+        "room_size": "50 sqm",
+        "availability": "Limited",
+        "room_images": "https://via.placeholder.com/150",
+        "special_offers": "Free bottle of wine on arrival",
+        "price": 200,
+        "ratings": 4.7,
+        "reviews": [
+            "Spacious suite with great amenities.",
+            "Loved the complimentary wine."
+        ],
+        "facilities": "City view, Free Wi-Fi, Air conditioning, Flat-screen TV, Mini bar, Coffee machine, Bathrobe, Room service, Safe, Complimentary toiletries"
+    },
+    {
+        "images": "https://i.ibb.co/wJsHzdV/image2.webp",
+        "room_description": "Classic Room with single bed",
+        "price_per_night": 70,
+        "room_size": "20 sqm",
+        "availability": "Available",
+        "room_images": "https://via.placeholder.com/150",
+        "special_offers": "Breakfast included",
+        "price": 70,
+        "ratings": 3.9,
+        "reviews": [
+            "Cozy room, good for solo travelers.",
+            "Breakfast was nice."
+        ],
+        "facilities": "Free Wi-Fi, Air conditioning, Flat-screen TV, Desk, Complimentary toiletries, Breakfast included, Room service, Safe, Daily housekeeping, Laundry service"
+    },
+    {
+        "images": "https://i.ibb.co/wJsHzdV/image2.webp",
+        "room_description": "Premium King Room with garden view",
+        "price_per_night": 150,
+        "room_size": "40 sqm",
+        "availability": "Available",
+        "room_images": "https://via.placeholder.com/150",
+        "special_offers": "Free dinner for two on first night",
+        "price": 150,
+        "ratings": 4.5,
+        "reviews": [
+            "Beautiful room and excellent dinner.",
+            "Very relaxing stay."
+        ],
+        "facilities": "Garden view, Free Wi-Fi, Air conditioning, Flat-screen TV, Mini bar, Coffee machine, Complimentary toiletries, Bathrobe, Room service, Safe"
+    },
+    {
+        "images": "https://i.ibb.co/wJsHzdV/image2.webp",
+        "room_description": "Economy Twin Room",
+        "price_per_night": 80,
+        "room_size": "25 sqm",
+        "availability": "Available",
+        "room_images": "https://via.placeholder.com/150",
+        "special_offers": "No special offers available",
+        "price": 80,
+        "ratings": 4.0,
+        "reviews": [
+            "Affordable and comfortable.",
+            "Good basic room."
+        ],
+        "facilities": "Free Wi-Fi, Air conditioning, Flat-screen TV, Desk, Complimentary toiletries, Room service, Safe, Daily housekeeping, Laundry service, Ironing facilities"
+    },
+    {
+        "images": "https://i.ibb.co/wJsHzdV/image2.webp",
+        "room_description": "Superior Double Room with balcony",
+        "price_per_night": 130,
+        "room_size": "35 sqm",
+        "availability": "Available",
+        "room_images": "https://via.placeholder.com/150",
+        "special_offers": "Late checkout available",
+        "price": 130,
+        "ratings": 4.3,
+        "reviews": [
+            "Lovely balcony and comfortable room.",
+            "Late checkout was a nice perk."
+        ],
+        "facilities": "Balcony, Free Wi-Fi, Air conditioning, Flat-screen TV, Mini bar, Coffee machine, Complimentary toiletries, Desk, Room service, Safe"
+    },
+    {
+        "images": "https://i.ibb.co/wJsHzdV/image2.webp",
+        "room_description": "Luxury Villa with private pool",
+        "price_per_night": 500,
+        "room_size": "100 sqm",
+        "availability": "Limited",
+        "room_images": "https://via.placeholder.com/150",
+        "special_offers": "Free private tour of the city",
+        "price": 500,
+        "ratings": 5.0,
+        "reviews": [
+            "Incredible villa and private pool.",
+            "Best vacation experience."
+        ],
+        "facilities": "Private pool, Free Wi-Fi, Air conditioning, Flat-screen TV, Mini bar, Coffee machine, Bathrobe, Room service, Safe, Jacuzzi"
+    },
+    {
+        "images": "https://i.ibb.co/wJsHzdV/image2.webp",
+        "room_description": "Standard Twin Room with street view",
+        "price_per_night": 85,
+        "room_size": "28 sqm",
+        "availability": "Available",
+        "room_images": "https://via.placeholder.com/150",
+        "special_offers": "No special offers available",
+        "price": 85,
+        "ratings": 3.9,
+        "reviews": [
+            "Good value for money.",
+            "Convenient location."
+        ],
+        "facilities": "Free Wi-Fi, Air conditioning, Flat-screen TV, Desk, Complimentary toiletries, Room service, Safe, Daily housekeeping, Laundry service, Ironing facilities"
+    },
+    {
+        "images": "https://i.ibb.co/wJsHzdV/image2.webp",
+        "room_description": "Deluxe Double Room with pool view",
+        "price_per_night": 160,
+        "room_size": "45 sqm",
+        "availability": "Available",
+        "room_images": "https://via.placeholder.com/150",
+        "special_offers": "20% off spa services",
+        "price": 160,
+        "ratings": 4.5,
+        "reviews": [
+            "Wonderful view and spacious room.",
+            "Loved the pool view."
+        ],
+        "facilities": "Pool view, Free Wi-Fi, Air conditioning, Flat-screen TV, Mini bar, Coffee machine, Bathrobe, Room service, Safe, Complimentary toiletries"
+    },
+    {
+        "images": "https://i.ibb.co/wJsHzdV/image2.webp",
+        "room_description": "Budget Single Room",
+        "price_per_night": 50,
+        "room_size": "15 sqm",
+        "availability": "Available",
+        "room_images": "https://via.placeholder.com/150",
+        "special_offers": "No special offers available",
+        "price": 50,
+        "ratings": 3.7,
+        "reviews": [
+            "Very basic but clean.",
+            "Good value for budget travelers."
+        ],
+        "facilities": "Free Wi-Fi, Air conditioning, Flat-screen TV, Desk, Complimentary toiletries, Room service, Safe, Daily housekeeping, Laundry service, Ironing facilities"
+    },
+    {
+        "images": "https://i.ibb.co/wJsHzdV/image2.webp",
+        "room_description": "Luxury Penthouse Suite",
+        "price_per_night": 600,
+        "room_size": "120 sqm",
+        "availability": "Limited",
+        "room_images": "https://via.placeholder.com/150",
+        "special_offers": "Free private chef for one night",
+        "price": 600,
+        "ratings": 4.9,
+        "reviews": [
+            "Outstanding luxury experience.",
+            "Private chef was a wonderful touch."
+        ],
+        "facilities": "Private chef, Free Wi-Fi, Air conditioning, Spa access, Flat-screen TV, Mini bar, Coffee machine, Bathrobe, Jacuzzi, Room service"
+    },
+    {
+        "images": "https://i.ibb.co/wJsHzdV/image2.webp",
+        "room_description": "Executive Twin Room",
+        "price_per_night": 180,
+        "room_size": "40 sqm",
+        "availability": "Available",
+        "room_images": "https://via.placeholder.com/150",
+        "special_offers": "Access to executive lounge",
+        "price": 180,
+        "ratings": 4.6,
+        "reviews": [
+            "Great executive benefits.",
+            "Comfortable and spacious room."
+        ],
+        "facilities": "Free Wi-Fi, Air conditioning, Flat-screen TV, Mini bar, Coffee machine, Complimentary toiletries, Room service, Safe, Desk, Executive lounge access"
+    },
+    {
+        "images": "https://i.ibb.co/wJsHzdV/image2.webp",
+        "room_description": "Standard Single Room",
+        "price_per_night": 75,
+        "room_size": "20 sqm",
+        "availability": "Available",
+        "room_images": "https://via.placeholder.com/150",
+        "special_offers": "No special offers available",
+        "price": 75,
+        "ratings": 3.8,
+        "reviews": [
+            "Affordable and good location.",
+            "Room was small but clean."
+        ],
+        "facilities": "Free Wi-Fi, Air conditioning, Flat-screen TV, Desk, Complimentary toiletries, Room service, Safe, Daily housekeeping, Laundry service, Ironing facilities"
+    }
+]

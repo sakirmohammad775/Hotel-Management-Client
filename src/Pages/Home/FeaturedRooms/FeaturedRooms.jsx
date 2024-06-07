@@ -10,9 +10,10 @@ const FeaturedRooms = () => {
     return (
 
         <>
-            <div className="w-full flex ">
+        <h3 className="font-bold text-gray-800 text-2xl italic my-8 text-center">Featured Rooms</h3>
+            <div className="w-full md:flex ">
                 {/* left side */}
-                <div className="grid grid-cols-2 w-2/3">
+                <div className="grid md:grid-cols-2 w-2/3">
                     {rooms.map(room => (<div key={room._id}>
                         <div className="card w-96 bg-base-100 shadow-xl">
                             <div className="relative">
@@ -28,8 +29,9 @@ const FeaturedRooms = () => {
                                 </div>
 
                                 <div>
-                                    <h3 className="UpperCase font-semibold font-serif text-gray-800">AMbassador Suite</h3>
-                                    <p className="text-gray-800">One world of caution:make sure your client knows that Lorem ipsum dolor sit amet consectetur </p>
+                                    <h3 className="UpperCase font-semibold font-serif text-gray-800">{room.room_description
+                                    }</h3>
+                                    <p className="text-gray-800">{room.facilities}</p>
                                 </div>
                             </div>
                         </div>
