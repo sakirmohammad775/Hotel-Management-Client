@@ -1,18 +1,27 @@
 
 import "./CheckOut.css"
 import RoomContext from "../../Provider/RoomProvider";
-import { useContext,  } from "react";
+import { useContext, useEffect, useState, } from "react";
+import { useParams } from "react-router-dom";
 
 const CheckOut = () => {
     const rooms = useContext(RoomContext)
- 
+    const { id } = useParams()
+    const [room, setRoom] = useState(null)
 
+    useEffect(() => {
+        const foundRoom = rooms.find(room => room._id === id)
+        setRoom(foundRoom)
+    }, [id, rooms])
+    if (!room) {
+        return <div>Not Available..........</div>
+    }
 
     return (
         <>
-            <h3>{room.room_description }</h3>
+            <h3>hello</h3>
             <div className="hotel-booking-form">
-                <h2>Bookings:</h2>
+                <h2>Bookings:{room.price}</h2>
                 <form>
                     <div>
                         <label>Name</label>
