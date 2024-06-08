@@ -11,7 +11,7 @@ const Card = () => {
         <>
         <h1>Hotel Management</h1>
         
-        <div className="grid grid-cols-3">
+        <div className="grid lg:grid-rows-3">
             {
                 rooms.map(room=>(<RoomCard key={room._id} room={room}></RoomCard>))
             }

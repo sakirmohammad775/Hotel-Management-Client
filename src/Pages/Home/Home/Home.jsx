@@ -1,6 +1,7 @@
 import CarouselBanner from "../../Rooms/CarouselBanner/CarouselBanner";
 import FeaturedRooms from "../FeaturedRooms/FeaturedRooms";
 import Map from "../Map/Map";
+import Testimonials from "../Testimonials/Testimonials";
 
 
 
@@ -11,6 +12,7 @@ const Home = () => {
         <>
         <CarouselBanner></CarouselBanner>
         <FeaturedRooms></FeaturedRooms>
+        <Testimonials></Testimonials>
         <Map></Map>
         
         
