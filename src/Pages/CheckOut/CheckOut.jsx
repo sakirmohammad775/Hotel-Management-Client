@@ -23,10 +23,10 @@ const CheckOut = () => {
         const form=e.target
         const name=form.name.value
         const email=user?.value
-        const date=form.date.value  
+        const checkInDate=form.checkInDate.value  
         const order={
             customerName:name,
-            date,
+            date:checkInDate,
             email,
             room
         }
