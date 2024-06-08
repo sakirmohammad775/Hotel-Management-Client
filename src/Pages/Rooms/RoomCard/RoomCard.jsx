@@ -1,41 +1,25 @@
-import { Button, Card, CardBody, CardHeader, Typography } from "@material-tailwind/react";
+
 import { Link } from "react-router-dom";
 
 
 
 const RoomCard = ({ room }) => {
-    const { _id,title, images, price, short_description, available } = room
-    console.log(room);
+    const { _id,room_description,price_per_night, images, price, short_description, available } = room
+
     return (
         <>
-
-            <Card className="w-full max-w-[68rem] mx-auto flex-row">
-                <CardHeader shadow={false} floated={false}
-                    className="m-0 w-2/5 shrink-0 rounded-r-none">
-                    <img
-                        src={images}
-                        alt="card-image"
-                        className="h-full w-full object-cover"
-                    />
-                </CardHeader>
-
-                <CardBody>
-                    <Typography variant="h6" color="gray" className="mb-4 uppercase">
-                        {title}</Typography>
-                    <Typography variant="h4" color="blue-gray" className="mb-2">
-                        {price}
-
-                    </Typography>
-                    <Typography color="gray" className="mb-8 font-normal">
-                        {short_description}
-                    </Typography>
-                    <Button variant="text" className="flex items-center gap-2">
-                        Show Details
-
-                    </Button>
-                </CardBody>
-            </Card>
-            <Link to={`/rooms/${_id}`}>details</Link>
+            <div className="card card-compact w-[340px] bg-base-100 shadow-xl">
+                <figure><img src={images} alt="Shoes" /></figure>
+                <div className="card-body">
+                    <h2 className="card-title">{room_description}</h2>
+                    <p>Price per Night : {price_per_night}$</p>
+                    <div className="card-actions justify-end">
+                    <Link to={`/rooms/${_id}`}><button className="btn btn-primary">Details</button></Link>
+                        
+                    </div>
+                </div>
+            </div>
+           
         </>
     );
 };
