@@ -3,9 +3,11 @@ import "./CheckOut.css"
 import RoomContext from "../../Provider/RoomProvider";
 import { useContext, useEffect, useState, } from "react";
 import { useParams } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const CheckOut = () => {
     const rooms = useContext(RoomContext)
+    const {user}=useContext(AuthContext)
     const { id } = useParams()
     const [room, setRoom] = useState(null)
 
@@ -16,20 +18,34 @@ const CheckOut = () => {
     if (!room) {
         return <div>Not Available..........</div>
     }
+    const handleSubmit=e=>{
+        e.preventDefault()
+        const form=e.target
+        const name=form.name.value
+        const email=user?.value
+        const date=form.date.value  
+        const order={
+            customerName:name,
+            date,
+            email,
+            room
+        }
+        console.log(order);
+      }
 
     return (
         <>
-            <h3>hello</h3>
+         
             <div className="hotel-booking-form">
                 <h2>Bookings:{room.price}</h2>
-                <form>
+                <form onSubmit={handleSubmit}>
                     <div>
                         <label>Name</label>
-                        <input type="text" name="name" />
+                        <input type="text" name="name" defaultValue={user?.display_Name} />
                     </div>
                     <div>
                         <label>Email</label>
-                        <input type="email" name="email" />
+                        <input type="email" name="email" defaultValue={user?.email}/>
                     </div>
                     <div>
                         <label>Phone</label>
