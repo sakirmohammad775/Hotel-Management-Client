@@ -13,7 +13,6 @@ const RoomDetails = () => {
 
     useEffect(() => {
         const foundRoom = rooms.find(room => room._id === id)
-        console.log(foundRoom);
         setRoom(foundRoom)
     }, [id, rooms])
     if (!room) {
@@ -181,7 +180,7 @@ const RoomDetails = () => {
                             </ul>
                         </CardBody>
                         <CardFooter className="mt-12 p-0">
-                           <Link to="/checkOut">
+                           <Link to={`/checkOut/${room._id}`}>
                            <Button
                                 size="lg"
                                 color="white"
@@ -189,7 +188,7 @@ const RoomDetails = () => {
                                 ripple={false}
                                 fullWidth={true}
                             >
-                                Book Now
+                                Book Now:{room._id}
                             </Button>
                            </Link>
                         </CardFooter>

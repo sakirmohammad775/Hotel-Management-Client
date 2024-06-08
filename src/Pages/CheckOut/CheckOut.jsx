@@ -1,26 +1,26 @@
-import { useContext, useState } from "react";
-import  "./CheckOut.css"
+
+import "./CheckOut.css"
 import RoomContext from "../../Provider/RoomProvider";
+import { useContext,  } from "react";
 
 const CheckOut = () => {
-    const room =useContext(RoomContext)
-    const [form, setForm] = useState([]);
-    
+    const rooms = useContext(RoomContext)
+ 
 
 
     return (
         <>
-        <h3>{room.title}</h3>
+            <h3>{room.room_description }</h3>
             <div className="hotel-booking-form">
                 <h2>Bookings:</h2>
-                <form onSubmit={handleSubmit}>
+                <form>
                     <div>
                         <label>Name</label>
                         <input type="text" name="name" />
                     </div>
                     <div>
                         <label>Email</label>
-                        <input type="email" name="email"  />
+                        <input type="email" name="email" />
                     </div>
                     <div>
                         <label>Phone</label>
@@ -28,11 +28,11 @@ const CheckOut = () => {
                     </div>
                     <div>
                         <label>Check-in Date</label>
-                        <input type="date" name="checkInDate"  />
+                        <input type="date" name="checkInDate" />
                     </div>
                     <div>
                         <label>Check-out Date</label>
-                        <input type="date" name="checkOutDate"  />
+                        <input type="date" name="checkOutDate" />
                     </div>
                     <div>
                         <label>Room Type</label>
@@ -52,7 +52,7 @@ const CheckOut = () => {
                     </div>
                     <div>
                         <label>Name on Card</label>
-                        <input type="text" name="cardName"  />
+                        <input type="text" name="cardName" />
                     </div>
                     <div>
                         <label>Expiry Date</label>
@@ -60,7 +60,7 @@ const CheckOut = () => {
                     </div>
                     <div>
                         <label>CVV</label>
-                        <input type="text" name="cvv"  />
+                        <input type="text" name="cvv" />
                     </div>
                     <button type="submit">Booking Confirm</button>
                 </form>
