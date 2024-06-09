@@ -22,13 +22,12 @@ const CheckOut = () => {
         e.preventDefault()
         const form = e.target
         const name = form.name.value
-        const email = user?.value
+        const email = user?.email
         const checkInDate = form.checkInDate.value
         const booking = {
             customerName: name,
             date: checkInDate,
-            email,
-            room
+            email
         }
         console.log(booking);
 
