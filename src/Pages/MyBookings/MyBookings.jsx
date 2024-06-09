@@ -1,5 +1,12 @@
+import { useContext } from "react";
+import { useLoaderData } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const MyBookings = () => {
+    const{user}=useLoaderData()
+    const [bookings,setBookings]=useContext(AuthContext)
+
+    const url =``
     return (
         <>
             <div className="overflow-x-auto">
