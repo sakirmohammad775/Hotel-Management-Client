@@ -1,4 +1,4 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 import './CheckAvailability.css';
 
 const CheckAvailability = () => {
@@ -40,7 +40,7 @@ const CheckAvailability = () => {
         </div>
         <div className="form-group">
           <label>
-             Check-out Date
+            Check-out Date
           </label>
           <input
             type="date"

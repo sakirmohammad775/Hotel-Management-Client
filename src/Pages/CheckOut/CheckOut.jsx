@@ -10,6 +10,7 @@ const CheckOut = () => {
     const { user } = useContext(AuthContext)
     const { id } = useParams()
     const [room, setRoom] = useState(null)
+    const [bookings,setBookings]=useState([])
 
     useEffect(() => {
         const foundRoom = rooms.find(room => room._id === id)
@@ -24,10 +25,14 @@ const CheckOut = () => {
         const name = form.name.value
         const email = user?.email
         const checkInDate = form.checkInDate.value
+        const review=form.review.value
+        const comment=form.comment.value
         const booking = {
             customerName: name,
             date: checkInDate,
-            email
+            email,
+            review,
+            comment
         }
         console.log(booking);
 
@@ -40,7 +45,7 @@ const CheckOut = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                setBookings(data)
             })
     }
 
@@ -48,12 +53,12 @@ const CheckOut = () => {
         <>
 
             <div className="hotel-booking-form">
-                <h2>Bookings:{room.price}</h2>
+                <h2>Bookings:{bookings.length}</h2>
                 <form onSubmit={handleSubmit}>
                     <div className=" grid md:grid-cols-2 gap-x-5" >
                         <div >
                             <label>Name</label>
-                            <input type="text" name="name" defaultValue={user?.display_Name} placeholder="Your Name" className="input input-bordered w-full " />
+                            <input type="text" name="name" defaultValue={user?.display_Name} placeholder="Your Name" className="input input-bordered w-full " required/>
                         </div>
                         <div>
                             <label>Email</label>
@@ -65,7 +70,7 @@ const CheckOut = () => {
                         </div>
                         <div>
                             <label>Check-in Date</label>
-                            <input className="input input-bordered w-full " type="date" name="checkInDate" />
+                            <input className="input input-bordered w-full " type="date" name="checkInDate" required />
                         </div>
                         <div>
                             <label>Check-out Date</label>
@@ -73,7 +78,7 @@ const CheckOut = () => {
                         </div>
                         <div>
                             <label>Room Type</label>
-                            <select className="input input-bordered w-full " name="roomType" >
+                            <select className="input input-bordered w-full " name="roomType" required >
                                 <option value="single">Single</option>
                                 <option value="double">Double</option>
                                 <option value="suite">Suite</option>
@@ -92,8 +97,12 @@ const CheckOut = () => {
                             <input className="input input-bordered w-full " type="text" name="cardName" />
                         </div>
                         <div>
-                            <label>Expiry Date</label>
-                            <input className="input input-bordered w-full " type="text" name="expiryDate" />
+                            <label>Comment</label>
+                            <input className="input input-bordered w-full " type="text" name="comment" required/>
+                        </div>
+                        <div>
+                            <label>Review</label>
+                            <input className="input input-bordered w-full " type="text" name="review" required />
                         </div>
                     </div>
                     <button className="w-full" type="submit">Booking Confirm</button>
