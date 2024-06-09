@@ -17,11 +17,11 @@ const Navbar = () => {
 
     const navLink = <>
         <Link to='/rooms'><li>rooms</li></Link>
-        <Link to='/myBookings'><li>My Bookings</li></Link>  {/* ony for for authenticated users .next work*/}
+         
         <Link><li>About Us</li></Link>
         {user &&
-            <>
-             <Link><li>About Us</li></Link>
+            <>{/* ony for for authenticated users .next work*/}
+             <Link to='/myBookings'><li>My Bookings</li></Link>
              <Link><li>About Us</li></Link>
         
         </>}

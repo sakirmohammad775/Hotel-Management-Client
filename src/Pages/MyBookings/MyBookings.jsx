@@ -1,12 +1,17 @@
-import { useContext } from "react";
-import { useLoaderData } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 
-const MyBookings = () => {
-    const{user}=useLoaderData()
-    const [bookings,setBookings]=useContext(AuthContext)
 
-    const url =``
+const MyBookings = () => {
+    const{user}=useContext(AuthContext)
+    const [bookings,setBookings]=useState([])
+
+    const url =`http://localhost:5000/bookings?email=${user?.email}`
+    useEffect(()=>{
+        fetch(url)
+        .then(res=>res.json())
+        .then(data=>console.log(data))
+    })
     return (
         <>
             <div className="overflow-x-auto">
@@ -41,7 +46,7 @@ const MyBookings = () => {
                                         </div>
                                     </div>
                                     <div>
-                                        <div className="font-bold">Hart Hagerty</div>
+                                        <div className="font-bold">{bookings.customerName}</div>
                                         <div className="text-sm opacity-50">United States</div>
                                     </div>
                                 </div>
