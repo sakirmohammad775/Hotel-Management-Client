@@ -10,7 +10,6 @@ const CheckOut = () => {
     const { user } = useContext(AuthContext)
     const { id } = useParams()
     const [room, setRoom] = useState(null)
-    const [bookings,setBookings]=useState([])
 
     useEffect(() => {
         const foundRoom = rooms.find(room => room._id === id)
@@ -19,6 +18,7 @@ const CheckOut = () => {
     if (!room) {
         return <div>Not Available..........</div>
     }
+    
     const handleSubmit = e => {
         e.preventDefault()
         const form = e.target
@@ -45,15 +45,16 @@ const CheckOut = () => {
         })
             .then(res => res.json())
             .then(data => {
-                setBookings(data)
+                console.log(data)
             })
     }
+    
 
     return (
         <>
 
             <div className="hotel-booking-form">
-                <h2>Bookings:{bookings.length}</h2>
+                <h2>Bookings:</h2>
                 <form onSubmit={handleSubmit}>
                     <div className=" grid md:grid-cols-2 gap-x-5" >
                         <div >

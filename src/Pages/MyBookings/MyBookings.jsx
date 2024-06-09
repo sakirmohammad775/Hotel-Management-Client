@@ -10,10 +10,11 @@ const MyBookings = () => {
     useEffect(()=>{
         fetch(url)
         .then(res=>res.json())
-        .then(data=>console.log(data))
+        .then(data=>setBookings(data))
     })
     return (
         <>
+        <h3>{bookings.length}</h3>
             <div className="overflow-x-auto">
                 <table className="table">
                     {/* head */}
