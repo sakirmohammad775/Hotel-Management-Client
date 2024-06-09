@@ -6,10 +6,10 @@ import PropTypes from 'prop-types';
 const PrivateRoutes = ({children}) => {
     const{user,loading}=useContext(AuthContext)
 
-    if(user){
-        return loading
-    }
-    if(user){
+  if(loading){
+    return <progress className="progress w-56"></progress>
+  }
+    if(user?.email){
         return children
     }
     return <Navigate to='/signIn'></Navigate>

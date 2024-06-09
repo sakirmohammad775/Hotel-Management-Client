@@ -7,47 +7,48 @@ import SignUp from "../Pages/SignUp/SignUp";
 import SignIn from "../Pages/SignIn/SignIn";
 import MyBookings from "../Pages/MyBookings/MyBookings";
 import CheckOut from "../Pages/CheckOut/CheckOut";
+import PrivateRoutes from "./PrivateRoutes";
 
 
 
 
 export const router = createBrowserRouter([
-    {
-      path: "/",
-      element:<Layout></Layout>,
-      children:[
-        {
-            path:"/",
-            element:<Home></Home>
-        },
-        {
-          path:"/rooms",
-          element:<Rooms></Rooms>,
-          loader:()=>fetch('http://localhost:5000/rooms')
-        },
-        {
-          path:"/rooms/:id",
-          element:<RoomDetails></RoomDetails>,
-          loader:()=>fetch('http://localhost:5000/rooms')
+  {
+    path: "/",
+    element: <Layout></Layout>,
+    children: [
+      {
+        path: "/",
+        element: <Home></Home>
+      },
+      {
+        path: "/rooms",
+        element: <Rooms></Rooms>,
+        loader: () => fetch('http://localhost:5000/rooms')
+      },
+      {
+        path: "/rooms/:id",
+        element: <RoomDetails></RoomDetails>,
+        loader: () => fetch('http://localhost:5000/rooms')
 
-        },
-        {
-          path:"/signUp",
-          element:<SignUp></SignUp>
-        },
-        {
-          path:"/signIn",
-          element:<SignIn></SignIn>
-        },
-        {
-          path:"/myBookings",
-          element:<MyBookings></MyBookings>,
-        },
-        {
-          path:"/checkOut/:id",
-          element:<CheckOut></CheckOut>,
-          loader:({params})=>fetch(`http://localhost:5000/rooms/${params.id}`)
-        }
-      ]
-    },
-  ]);
+      },
+      {
+        path: "/signUp",
+        element: <SignUp></SignUp>
+      },
+      {
+        path: "/signIn",
+        element: <SignIn></SignIn>
+      },
+      {
+        path: "/myBookings",
+        element: <PrivateRoutes><MyBookings></MyBookings></PrivateRoutes>,
+      },
+      {
+        path: "/checkOut/:id",
+        element: <CheckOut></CheckOut>,
+        loader: ({ params }) => fetch(`http://localhost:5000/rooms/${params.id}`)
+      }
+    ]
+  },
+]);
