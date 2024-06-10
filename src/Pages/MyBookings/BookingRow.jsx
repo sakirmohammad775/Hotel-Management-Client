@@ -1,7 +1,9 @@
 
 
-const BookingRow = ({booking}) => {
-    const {customerName,email}=booking
+const BookingRow = ({ booking,handleDelete }) => {
+    const { _id, customerName, email, date, price } = booking
+
+    
     return (
         <>
             <tr>
@@ -24,13 +26,11 @@ const BookingRow = ({booking}) => {
                     </div>
                 </td>
                 <td>
-                    Zemlak, Daniel and Leannon
-                    <br />
-                    <span className="badge badge-ghost badge-sm">Desktop Support Technician</span>
+                    {date}
                 </td>
-                <td>Purple</td>
+                <td>{price}</td>
                 <th>
-                    <button className="btn btn-ghost btn-xs">delete</button>
+                    <button onClick={() => handleDelete(_id)}>Delete</button>
                 </th>
             </tr>
 

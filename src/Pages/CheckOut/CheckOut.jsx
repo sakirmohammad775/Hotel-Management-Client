@@ -27,12 +27,15 @@ const CheckOut = () => {
         const checkInDate = form.checkInDate.value
         const review=form.review.value
         const comment=form.comment.value
+        const price=form.price.value
+
         const booking = {
             customerName: name,
             date: checkInDate,
             email,
             review,
-            comment
+            comment,
+            price
         }
         console.log(booking);
 
@@ -94,8 +97,8 @@ const CheckOut = () => {
                             <input className="input input-bordered w-full " type="text" name="cardNumber" />
                         </div>
                         <div>
-                            <label>Name on Card</label>
-                            <input className="input input-bordered w-full " type="text" name="cardName" />
+                            <label>Price</label>
+                            <input className="input input-bordered w-full " type="text" name="price" defaultValue={'90'} />
                         </div>
                         <div>
                             <label>Comment</label>
