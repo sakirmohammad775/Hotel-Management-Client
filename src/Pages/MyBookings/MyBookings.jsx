@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import BookingRow from "./BookingRow";
+import Swal from "sweetalert2";
 
 
 const MyBookings = () => {
@@ -8,26 +9,44 @@ const MyBookings = () => {
     const [bookings, setBookings] = useState([])
 
     const handleDelete = async (id) => {
-        const proceed = confirm('Are you sure you want to delete?');
-        if (proceed) {
-            try {
-                const response = await fetch(`http://localhost:5000/bookings/${id}`, {
-                    method: 'DELETE',
-                });
-                const data = await response.json();
-                console.log(data);
-                if (data.deletedCount > 0) {
-                    alert('Deleted successfully');
-                    const remaining = bookings.filter(booking => booking._id !== id)
-                    setBookings(remaining)
-                } else {
-                    alert('Failed to delete. Item may not exist.');
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then(async(result)=>{
+            if (result.isConfirmed) {
+                try {
+                    const response = await fetch(`http://localhost:5000/bookings/${id}`, {
+                        method: 'DELETE',
+                    });
+                    const data = await response.json();
+                    console.log(data);
+                    if (data.deletedCount > 0) {
+                        // alert('Deleted successfully');
+                        Swal.fire({
+                            position: "top-end",
+                            icon: "success",
+                            title: "Your work has been saved",
+                            showConfirmButton: false,
+                            timer: 1500
+                          });
+                        const remaining = bookings.filter(booking => booking._id !== id)
+                        setBookings(remaining)
+                    } else {
+                        alert('Failed to delete. Item may not exist.');
+                    }
+                } catch (error) {
+                    console.error('Error deleting booking:', error);
+                    alert('An error occurred while deleting the booking.');
                 }
-            } catch (error) {
-                console.error('Error deleting booking:', error);
-                alert('An error occurred while deleting the booking.');
             }
-        }
+
+        })
+        
     }
 
     const url = `http://localhost:5000/bookings?email=${user?.email}`
