@@ -42,7 +42,8 @@ const MyBookings = () => {
             method:'PATCH',
             headers:{
                 'content-type':'application/json'
-            }
+            },
+            body:JSON.stringify({status:'confirm'})
         })
         .then(res=>res.json())
         .then(data=>{
