@@ -16,7 +16,7 @@ const MyBookings = () => {
             showCancelButton: true,
             confirmButtonColor: "#3085d6",
             cancelButtonColor: "#d33",
-            confirmButtonText: "Yes, delete it!"
+            confirmButtonText: "Yes, Delete it!"
         }).then(async(result)=>{
             if (result.isConfirmed) {
                 try {
@@ -30,7 +30,7 @@ const MyBookings = () => {
                         Swal.fire({
                             position: "top-end",
                             icon: "success",
-                            title: "Your work has been saved",
+                            title: "Deleted Successfully",
                             showConfirmButton: false,
                             timer: 1500
                           });
