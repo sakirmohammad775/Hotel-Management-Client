@@ -4,9 +4,9 @@ import BookingRow from "./BookingRow";
 
 
 const MyBookings = () => {
-    const{user}=useContext(AuthContext)
-    const [bookings,setBookings]=useState([])
-    
+    const { user } = useContext(AuthContext)
+    const [bookings, setBookings] = useState([])
+
     const handleDelete = async (id) => {
         const proceed = confirm('Are you sure you want to delete?');
         if (proceed) {
@@ -18,6 +18,8 @@ const MyBookings = () => {
                 console.log(data);
                 if (data.deletedCount > 0) {
                     alert('Deleted successfully');
+                    const remaining = bookings.filter(booking => booking._id !== id)
+                    setBookings(remaining)
                 } else {
                     alert('Failed to delete. Item may not exist.');
                 }
@@ -28,15 +30,31 @@ const MyBookings = () => {
         }
     }
 
-    const url =`http://localhost:5000/bookings?email=${user?.email}`
-    useEffect(()=>{
+    const url = `http://localhost:5000/bookings?email=${user?.email}`
+    useEffect(() => {
         fetch(url)
+            .then(res => res.json())
+            .then(data => setBookings(data))
+    }, [])
+
+    const handleBookingConfirm = id => {
+        fetch(`http://localhost:5000/bookings/${id}`,{
+            method:'PATCH',
+            headers:{
+                'content-type':'application/json'
+            }
+        })
         .then(res=>res.json())
-        .then(data=>setBookings(data))
-    },[])
+        .then(data=>{
+            console.log(data);
+            if(data.modifiedCount>0){
+                //
+            }
+        })
+    }
     return (
         <>
-        <h3>{bookings.length}</h3>
+            <h3>{bookings.length}</h3>
             <div className="overflow-x-auto">
                 <table className="table">
                     {/* head */}
@@ -54,13 +72,14 @@ const MyBookings = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        
+
                         {
-                            bookings.map(booking=><BookingRow key={booking._id} booking={booking} handleDelete={handleDelete}></BookingRow>)
+                            bookings.map(booking => <BookingRow key={booking._id} booking={booking} handleDelete={handleDelete}
+                            handleBookingConfirm={handleBookingConfirm}></BookingRow>)
                         }
                     </tbody>
-               
-                
+
+
                 </table>
             </div>
         </>
