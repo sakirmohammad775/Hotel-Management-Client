@@ -103,7 +103,7 @@ const MyBookings = () => {
                                 handleBookingConfirm={handleBookingConfirm}></BookingRow>)
                         }
                     </tbody>
-                        <div></div>
+                       
 
                 </table>
             </div>
