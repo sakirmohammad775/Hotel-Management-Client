@@ -49,7 +49,14 @@ const SignUp = () => {
                                 </label>
                                 <input type="name" placeholder="name" name="name" className="input input-bordered bg-transparent  " required />
                             </div>
-                           
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="font-bold">Email</span>
+                                </label>
+                                <input type="email" placeholder="email"
+                                    name="email"
+                                    className="input input-bordered bg-transparent" required />
+                            </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="font-bold">Password</span>
