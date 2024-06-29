@@ -40,7 +40,7 @@ const CheckAvailability = () => {
         </div>
         <div className="form-group">
           <label>
-            Check-out Date
+            
           </label>
           <input
             type="date"
