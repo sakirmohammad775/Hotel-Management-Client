@@ -30,7 +30,13 @@ const CheckAvailability = () => {
           <label>
             Check-in Date
           </label>
-         
+          <input
+            type="date"
+            name="checkInDate"
+            value={form.checkInDate}
+            onChange={handleChange}
+            required
+          />
         </div>
         <div className="form-group">
           <label>
