@@ -28,7 +28,7 @@ const CheckAvailability = () => {
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label>
-            Check-in Date
+           
           </label>
           <input
             type="date"
