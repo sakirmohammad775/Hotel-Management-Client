@@ -42,7 +42,7 @@ const FeaturedRooms = () => {
                 </div>
                 {/* right side */}
                 <div className="w-1/3">
-                    <CheckAvailability></CheckAvailability>
+                    
                 </div>
             </div>
         </>
