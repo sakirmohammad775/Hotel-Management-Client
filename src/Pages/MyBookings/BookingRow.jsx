@@ -9,7 +9,7 @@ const BookingRow = ({ booking, handleDelete, handleBookingConfirm }) => {
             <tr>
                 <th>
                     <label>
-                        
+                        <input type="checkbox" className="checkbox" />
                     </label>
                 </th>
                 <td>
