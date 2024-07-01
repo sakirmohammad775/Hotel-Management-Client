@@ -22,7 +22,7 @@ const FeaturedRooms = () => {
                             </div>
                             <div className="">
                                 <div className="flex mt-3">
-                                   
+                                    <h2 className="mr-10">Sleeps 2,Queen Bed </h2>
                                     <div className="Flex gap-5"><FaCameraRetro />
                                         <FaWifi />
                                         <FcDataProtection /></div>
