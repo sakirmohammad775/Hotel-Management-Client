@@ -9,7 +9,7 @@ const Card = () => {
     
     return (
         <>
-       
+        <h1>Hotel Management</h1>
         
         <div className="grid lg:grid-cols-3">
             {
