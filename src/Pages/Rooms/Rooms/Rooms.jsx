@@ -8,7 +8,7 @@ const Rooms = () => {
     
     return (
         <>
-        <CarouselBanner></CarouselBanner>
+        
         <Card></Card>
 
         </>
