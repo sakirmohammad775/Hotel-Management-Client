@@ -13,7 +13,7 @@ const Home = () => {
         <CarouselBanner></CarouselBanner>
         <FeaturedRooms></FeaturedRooms>
         <Testimonials></Testimonials>
-        <Map></Map>
+        
         
         
         </>
