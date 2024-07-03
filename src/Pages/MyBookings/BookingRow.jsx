@@ -20,7 +20,8 @@ const BookingRow = ({ booking, handleDelete, handleBookingConfirm }) => {
                             </div>
                         </div>
                         <div>
-                           
+                            <div className="font-bold">{email}</div>
+                            <div className="text-sm opacity-50">{customerName}</div>
                         </div>
                     </div>
                 </td>
