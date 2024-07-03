@@ -81,8 +81,7 @@ const SignUp = () => {
                         {/*another login process*/}
                         <div className="flex my-5 justify-center gap-6">
 
-                            <button className="pt-2"><FaGoogle /></button>
-                            <button className="pt-2"><FaFacebook /></button>
+                           
                         </div>
                     </div>
                 </div>
