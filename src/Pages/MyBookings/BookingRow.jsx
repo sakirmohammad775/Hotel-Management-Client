@@ -28,7 +28,7 @@ const BookingRow = ({ booking, handleDelete, handleBookingConfirm }) => {
                 <td>
                     {date}
                 </td>
-                
+                <td>{price}</td>
                 <th>
                     <button onClick={() => handleDelete(_id)}>Delete</button>
                 </th>
