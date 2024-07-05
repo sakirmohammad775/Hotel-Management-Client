@@ -72,7 +72,7 @@ const SignIn = () => {
                                 </label>
                             </div>
                             <div className="form-control mt-3">
-                                <button type="submit" value="Submit" className="btn  bg-transparent">SignIn</button>
+                               
                             </div>
                         </form>
                         {/*if error found*/}
