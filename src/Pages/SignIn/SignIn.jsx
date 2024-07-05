@@ -79,7 +79,7 @@ const SignIn = () => {
                         {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
 
 
-                        
+                        <p className="text-center">Already have an account? <Link to="/signUp">Sign In</Link></p>
 
                         {/*another login process*/}
                         <div className="flex my-5 justify-center gap-6">
