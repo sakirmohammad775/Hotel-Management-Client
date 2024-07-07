@@ -27,7 +27,7 @@ const Testimonials = () => {
 
                 <div className="card w-96 bg-base-100 ">
                     <div className="card-body">
-                       
+                        <h2 className="text-center font-extrabold my-5 ">TripAdvisor</h2>
                         {/* rating */}
                         <div className="rating w-24 gap-2 ml-32">
                             <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
