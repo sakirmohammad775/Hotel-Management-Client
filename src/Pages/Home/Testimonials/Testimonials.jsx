@@ -20,7 +20,7 @@ const Testimonials = () => {
                         <p className="text-wrap text-center w-80 mx-8 font-serif ">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem cumque est adipisci iusto corrupti aperiam id nemo enim natus odio, magni reprehenderit et rem nihil, Lorem ipsum dolor sit amet.</p>
                         <div className="bg-gray-900 w-96 h-16 pt-2">
                             <h3 className="text-gray-300 text-center">Neil Brown</h3>
-                            <p className="text-gray-300 text-center">01/02/2021</p>
+                           
                         </div>
                     </div>
                 </div>
