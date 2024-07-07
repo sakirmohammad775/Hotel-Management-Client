@@ -82,7 +82,7 @@ const SignIn = () => {
                         <p className="text-center">Already have an account? <Link to="/signUp">Sign In</Link></p>
 
                         {/*another login process*/}
-                       
+                        <div className="flex my-5 justify-center gap-6">
 
                             <button className="pt-2"onClick={handleGoogleSignIn}><FaGoogle/></button>
                         
