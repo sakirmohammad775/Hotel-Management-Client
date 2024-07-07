@@ -61,7 +61,7 @@ const SignIn = () => {
                             </div>
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="font-bold">Password</span>
+                                  
                                 </label>
                                 <input type="password"
                                     name="password"
