@@ -89,7 +89,7 @@ const CheckOut = () => {
                             </select>
                         </div>
                         <div>
-                            
+                            <label>Number of Guests</label>
                             <input className="input input-bordered w-full " type="number" name="guests" required min="1" />
                         </div>
                         <div>
