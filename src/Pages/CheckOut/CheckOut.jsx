@@ -101,8 +101,7 @@ const CheckOut = () => {
                             <input className="input input-bordered w-full " type="text" name="price" defaultValue={'90'} />
                         </div>
                         <div>
-                            <label>Comment</label>
-                            <input className="input input-bordered w-full " type="text" name="comment" required/>
+                           
                         </div>
                         <div>
                             <label>Review</label>
