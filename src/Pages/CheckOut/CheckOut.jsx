@@ -93,7 +93,7 @@ const CheckOut = () => {
                             <input className="input input-bordered w-full " type="number" name="guests" required min="1" />
                         </div>
                         <div>
-                            <label>Card Number</label>
+                            
                             <input className="input input-bordered w-full " type="text" name="cardNumber" />
                         </div>
                         <div>
