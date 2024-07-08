@@ -105,7 +105,8 @@ const CheckOut = () => {
                             <input className="input input-bordered w-full " type="text" name="comment" required/>
                         </div>
                         <div>
-                            
+                            <label>Review</label>
+                            <input className="input input-bordered w-full " type="text" name="review" required />
                         </div>
                     </div>
                     <button className="w-full" type="submit">Booking Confirm</button>
