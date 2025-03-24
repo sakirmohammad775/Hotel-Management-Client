@@ -1,16 +1,15 @@
-import CarouselBanner from "../../Rooms/CarouselBanner/CarouselBanner";
+
+import Banner from "../Banner/Banner";
 import FeaturedRooms from "../FeaturedRooms/FeaturedRooms";
 import Map from "../Map/Map";
 import Testimonials from "../Testimonials/Testimonials";
 
 
 
-
-
 const Home = () => {
     return (
         <>
-        <CarouselBanner></CarouselBanner>
+        <Banner></Banner>
         <FeaturedRooms></FeaturedRooms>
         <Testimonials></Testimonials>
         <Map></Map>

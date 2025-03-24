@@ -3,7 +3,7 @@ const Testimonials = () => {
     return (
         <>
             <h3 className="text-center font-serif font-bold text-2xl text-gray-800">Review</h3>
-            <p>Our Beloved Customer hotel Review</p>
+            <p className="text-center mt-5">Our Beloved Customer hotel Review</p>
             <div className="grid lg:grid-cols-3 md:grid-cols-2 mx-auto max-w-screen-xl">
 
                 <div className="card w-[360px] bg-base-100  ">

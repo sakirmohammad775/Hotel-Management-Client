@@ -1,0 +1,71 @@
+.footer {
+    background-color: #222; /* Dark background */
+    color: #ddd;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allow sections to wrap on smaller screens */
+  }
+  
+  .footer-section {
+    flex: 1 1 200px; /* Distribute space evenly, minimum 200px width */
+    margin: 20px;
+  }
+  
+  .unwind-info h3,
+  .services h3,
+  .quick-links h3,
+  .contact-info h3 {
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  .unwind-logo {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .hotel-booking {
+    font-size: 0.9em;
+    margin-bottom: 15px;
+  }
+  
+  .description {
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .social-icons a {
+    color: #ddd;
+    margin-right: 10px;
+    font-size: 1.2em;
+  }
+  
+  .service-list,
+  .link-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .service-list li,
+  .link-list li {
+    margin-bottom: 10px;
+  }
+  
+  .contact-info p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .contact-info i {
+    margin-right: 10px;
+    color: #aaa;
+  }
+  
+  /* Add media queries for responsiveness */
+  @media (max-width: 768px) {
+    .footer-section {
+      flex-basis: 100%; /* Take full width on smaller screens */
+    }
+  }

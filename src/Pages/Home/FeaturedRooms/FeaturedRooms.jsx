@@ -1,52 +1,81 @@
 
-import { useContext } from "react";
-import { FaCameraRetro, FaWifi } from "react-icons/fa";
-import { FcDataProtection } from "react-icons/fc";
-import RoomContext from "../../../Provider/RoomProvider";
-import CheckAvailability from "../../../Shared/CheckAvailability/CheckAvailability";
+function FeaturedRooms() {
+  const rooms = [
+    {
+      name: 'Suite Room',
+      description: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
+      price: '$450 / NIGHT',
+      image: 'https://i.ibb.co.com/xLPb8Q4/1-W34-Lpsd-Ob7-Tb-Oy-Kcto-Sm6w.jpg', // Replace with your image path
+      reverse: true, // Add reverse property for Suite Room
+    },
+    {
+      name: 'Deluxe Room',
+      description: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
+      price: '$450 / NIGHT',
+      image: 'https://i.ibb.co.com/xLPb8Q4/1-W34-Lpsd-Ob7-Tb-Oy-Kcto-Sm6w.jpg', // Replace with your image path
+      reverse: false, // Default order for Deluxe Room
+    },
+    {
+      name: 'Family Room',
+      description: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
+      price: '$450 / NIGHT',
+      image: 'https://i.ibb.co.com/xLPb8Q4/1-W34-Lpsd-Ob7-Tb-Oy-Kcto-Sm6w.jpg', // Replace with your image path
+      reverse: true, // Add reverse property for Family Room
+    },
+  ];
 
-const FeaturedRooms = () => {
-    const rooms = useContext(RoomContext)
-    return (
-
-        <>
-            <h3 className="font-bold text-gray-800 text-2xl italic my-8 text-center">Featured Rooms</h3>
-            <div className="w-full md:flex text-gray-600">
-                {/* left side */}
-                <div className="grid md:grid-cols-2 gap-y-10 w-2/3">
-                    {rooms.filter(room => room.availability === "Available" && room.special_offers !== "No special offers available").map(room => (<div key={room._id}>
-                        <div className=" w-[320px] bg-base-100 shadow-xl">
-                            <div className="relative">
-                                <img src={room.images} alt="Shoes" />
-                                <button className="-mt-52 ml-64 btn absolute">Top</button>
-                            </div>
-                            <div className="">
-                                <div className="flex mt-3">
-                                    <h2 className="mr-10">Sleeps 2,Queen Bed </h2>
-                                    <div className="Flex gap-5"><FaCameraRetro />
-                                        <FaWifi />
-                                        <FcDataProtection /></div>
-                                </div>
-
-                                <div>
-                                    <h3 className="UpperCase font-semibold font-serif text-gray-800">{room.room_description
-                                    }</h3>
-                                    <p className="text-gray-800">{room.
-                                        special_offers
-                                    }</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>))
-                    }
+  return (
+    <div className="text-center py-16 px-4 bg-gray-100">
+      <div className="mb-8">
+        <p className="uppercase text-sm text-gray-500 mb-1">OUR ROOMS</p>
+        <h2 className="text-4xl font-semibold">Featured Rooms</h2>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        {rooms.map((room, index) => (
+          <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md">
+            {room.reverse ? (
+              <>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-2">{room.name}</h3>
+                  <p className="text-gray-600 mb-4">{room.description}</p>
+                  <div className="flex justify-between items-center">
+                    <p className="font-bold">{room.price}</p>
+                    <button className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">
+                      BOOK NOW
+                    </button>
+                  </div>
                 </div>
-                {/* right side */}
-                <div className="w-1/3">
-                    <CheckAvailability></CheckAvailability>
+                <div className="h-64 overflow-hidden">
+                  <img src={room.image} alt={room.name} className="w-full h-full object-cover" />
                 </div>
-            </div>
-        </>
-    );
-};
+              </>
+            ) : (
+              <>
+                <div className="h-64 overflow-hidden">
+                  <img src={room.image} alt={room.name} className="w-full h-full object-cover" />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-2">{room.name}</h3>
+                  <p className="text-gray-600 mb-4">{room.description}</p>
+                  <div className="flex justify-between items-center">
+                    <p className="font-bold">{room.price}</p>
+                    <button className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">
+                      BOOK NOW
+                    </button>
+                  </div>
+                </div>
+              </>
+            )}
+          </div>
+        ))}
+      </div>
+      <p className="mt-12 text-sm text-gray-500">
+        <a href="https://preview.colorlib.com/theme/unwind/room-single.html" className="text-blue-500">
+          https://preview.colorlib.com/theme/unwind/room-single.html
+        </a>
+      </p>
+    </div>
+  );
+}
 
 export default FeaturedRooms;
